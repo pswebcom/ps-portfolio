@@ -8,7 +8,7 @@
 
     // Check the data.
     if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: http://www.pswebco.com#contact-form");
+        header("Location: https://gifted-yonath-24e033.netlify.app#contact");
         exit;
     }
 
@@ -30,6 +30,6 @@
     mail($recipient, $subject, $email_content, $email_headers);
     
     // Redirect to the index.html page with success code
-    header("Location: http://www.psdevco.com");
+    header("Location: https://gifted-yonath-24e033.netlify.app");
 
 ?>
