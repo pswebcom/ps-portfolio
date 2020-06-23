@@ -221,6 +221,56 @@ section {
   transform: rotate(-135deg);
   top: 0;
 }
+/* animatiion */
+
+.h {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: mymove 3s;
+}
+.i {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: mymovez 3s;
+}
+
+@keyframes mymove {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: 350px;
+    color: #04f799;
+  }
+  75% {
+    left: -450px;
+    color: #021d44;
+  }
+  100% {
+    left: 0px;
+    color: #021d44;
+  }
+}
+
+@keyframes mymovez {
+  0% {
+    left: 0px;
+  }
+  25% {
+    left: -200px;
+    color: #021d44;
+  }
+  75% {
+    left: -450px;
+    color: #021d44;
+  }
+  100% {
+    left: 0px;
+    color: #04f799;
+  }
+}
 
 /* _________________________________________________________________________________________________ */
 /* header */
@@ -229,6 +279,14 @@ section {
 header {
   display: flex;
   height: 93vh;
+}
+
+.h {
+  color: #021d44;
+}
+
+.i {
+  color: #04f799;
 }
 
 .right-div,
@@ -243,6 +301,27 @@ header {
 
 .right-div {
   background-color: #021d44;
+}
+
+.left-div,
+.right-div {
+  position: relative;
+}
+
+header#home .hi {
+  position: absolute;
+  left: 47.5%;
+  top: 43.5%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 15rem;
+  width: 150px;
+  text-align: center;
+  /* background-color: #fff; */
+  font-weight: bolder;
+  /* border: 1px solid red; */
+  height: 100px;
+  z-index: 999;
 }
 
 .menu-bar-icon {
@@ -588,6 +667,10 @@ form button:hover {
 }
 
 @media only screen and (max-width: 1030px) {
+  header#home .hi {
+    left: 45.5%;
+  }
+
   .about-me .info p {
     font-size: 2.1rem;
   }
@@ -664,6 +747,11 @@ form button:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  header#home .hi {
+    left: 44.5%;
+    top: 32%;
+  }
+
   body {
     padding: 0px;
   }
@@ -713,19 +801,6 @@ form button:hover {
     margin: 0 auto;
   }
 
-  /* .about-me div.info {
-    padding-top: 0px;
-  }
-
-  .about-me .info h1 {
-    font-size: 3rem;
-  }
-
-  .about-me .info h2 {
-    font-size: 3rem;
-  }
-*/
-
   .about-me .info h2 {
     font-size: 3rem;
   }
@@ -735,7 +810,19 @@ form button:hover {
   }
 }
 
+@media only screen and (max-width: 650px) {
+  header#home .hi {
+    left: 43.5%;
+  }
+}
+
 @media only screen and (max-width: 576px) {
+  header#home .hi {
+    left: 49.5%;
+    top: 35%;
+    font-size: 10rem;
+  }
+
   .navi__link:link,
   .navi__link:visited {
     font-size: 2.2rem;
@@ -781,4 +868,7 @@ form button:hover {
     width: 95%;
     margin-bottom: 1rem;
   }
+}
+
+@media only screen and (max-width: 450px) {
 }
