@@ -2,16 +2,13 @@
 document.querySelector(".loading").style.display = "block";
 document.querySelector(".body").style.display = "none";
 window.onload = function () {
-  // setTimeout(() => {
   document.querySelector(".loading").style.display = "none";
   document.querySelector(".body").style.display = "block";
-  // }, 1000);
 };
 // ____________________________________________________________________________________________________________________
 // ________________________________________________________________________________________________
-// ________________________________________________________________________________________________
 
-// ---------------------------------onScroll
+// --------onScroll
 window.addEventListener("load", function () {
   var elem1 = document.querySelector(".react");
   var elem2 = document.querySelector(".css");
@@ -37,7 +34,6 @@ window.addEventListener("load", function () {
         document.documentElement.scrollTop < 460 &&
         repeat === false)
     ) {
-      // console.log("haha");
       repeat = true;
       let i = 0;
 
@@ -97,9 +93,8 @@ window.addEventListener("load", function () {
 });
 // ____________________________________________________________________________________________________________________
 // ________________________________________________________________________________________________
-// ________________________________________________________________________________________________
 
-// ------------------------validation & submission
+// ------validation & submission
 let name = document.getElementById("name");
 let email = document.getElementById("email");
 let message = document.getElementById("message");
@@ -234,9 +229,8 @@ function scrollIntoContacts() {
 }
 // ____________________________________________________________________________________________________________________
 // ____________________________________________________________________________________________________________________
-// ____________________________________________________________________________________________________________________
 
-// -----------------------------------projects
+//-----------------projects
 
 let allButton = document.querySelector(".all.btn");
 let jsButton = document.querySelector(".js.btn");
@@ -321,25 +315,8 @@ reactButton.addEventListener("click", function () {
 
 // ____________________________________________________________________________________________________________________
 // ____________________________________________________________________________________________________________________
-// ____________________________________________________________________________________________________________________
-
-// ----------------------------------menu overlay back
-// .navi__checkbox:checked ~ .navi__button__background {
-//   transform: scale(80);
-// }
-
-// .navi__checkbox:checked ~ .navi__nav {
-//   opacity: 1;
-//   width: 100%;
-// }
 
 let x = document.querySelectorAll(".navi__link");
-// let y = document.querySelector(".menu-container");
-// let overlay = document.querySelector(".overlay");
-// let links = document.querySelector(".links");
-// overlay.style.height = "0px";
-// links.style.visibility = "hidden";
-
 x.forEach(function (element, index) {
   element.addEventListener("click", function (e) {
     document.querySelector(".navi__button__background").style.transform =
@@ -349,33 +326,3 @@ x.forEach(function (element, index) {
     document.querySelector(".navi__checkbox").checked = false;
   });
 });
-
-// y.addEventListener("click", function (e) {
-//   if (
-//     overlay.style.height === "800px" &&
-//     links.style.visibility === "visible"
-//   ) {
-//     overlay.style.height = "0px";
-//     links.style.visibility = "hidden";
-//     document.querySelector(".overlay").style.zIndex = "-99";
-//   } else {
-//     overlay.style.height = "800px";
-//     document.querySelector(".overlay").style.zIndex = "2999";
-//   }
-//   if (overlay.style.height === "800px") {
-//     links.style.visibility = "visible";
-//   }
-// });
-
-// x.forEach(function (element, index) {
-//   element.addEventListener("click", function (e) {
-//     if (e.currentTarget.classList.contains("link")) {
-//       console.log(e.currentTarget);
-//       document.querySelector(".overlay").style.height = "0px";
-//       document.querySelector(".links").style.visibility = "hidden";
-//       document.querySelector(".overlay").style.zIndex = "-99";
-//       let z = document.querySelector(".container.menu");
-//       myFunction(z);
-//     }
-//   });
-// });
